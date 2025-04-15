@@ -25,6 +25,7 @@ public class Loan {
     private boolean returned;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne

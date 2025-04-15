@@ -24,6 +24,6 @@ public class User {
     private String email;
     private String phone;
 
-    @OneToMany
+    @OneToMany(mappedBy = "user")
     private List<Loan> loans;
 }
