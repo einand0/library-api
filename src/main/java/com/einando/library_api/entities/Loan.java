@@ -23,4 +23,11 @@ public class Loan {
     private Date loanDate;
     private Date returnDate;
     private boolean returned;
+
+    @ManyToOne
+    private User user;
+
+    @ManyToOne
+    private Book book;
+
 }
