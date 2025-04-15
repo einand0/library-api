@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -27,8 +28,8 @@ public class Book {
     private Publisher publisher;
 
     @ManyToMany
-    private Author author;
+    private List<Author> authors;
 
     @OneToMany
-    private Loan loan;
+    private List<Loan> loan;
 }
