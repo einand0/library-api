@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -21,4 +22,7 @@ public class Publisher {
     private UUID publisher_id;
     private String name;
     private String cnpj;
+
+    @OneToMany
+    private List<Book> books;
 }
