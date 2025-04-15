@@ -22,6 +22,6 @@ public class Author {
     private UUID author_id;
     private String name;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "authors")
     private List<Book> books;
 }
