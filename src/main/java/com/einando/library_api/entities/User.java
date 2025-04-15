@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -22,4 +23,7 @@ public class User {
     private String name;
     private String email;
     private String phone;
+
+    @OneToMany
+    private List<Loan> loans;
 }
