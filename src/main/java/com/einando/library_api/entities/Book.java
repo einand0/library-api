@@ -25,6 +25,7 @@ public class Book {
     private boolean available;
 
     @ManyToOne
+    @JoinColumn(name = "publisher_id")
     private Publisher publisher;
 
     @ManyToMany
