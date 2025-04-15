@@ -22,4 +22,13 @@ public class Book {
     private String title;
     private Integer releaseYear;
     private boolean available;
+
+    @ManyToOne
+    private Publisher publisher;
+
+    @ManyToMany
+    private Author author;
+
+    @OneToMany
+    private Loan loan;
 }
