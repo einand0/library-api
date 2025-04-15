@@ -9,15 +9,16 @@ import lombok.Setter;
 import java.util.UUID;
 
 @Entity
-@Table(name = "tb_authors")
+@Table(name = "tb_publishers")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Author {
+public class Publisher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID author_id;
+    private UUID publisher_id;
     private String name;
+    private String cnpj;
 }
