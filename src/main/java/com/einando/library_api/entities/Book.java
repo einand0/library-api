@@ -31,6 +31,6 @@ public class Book {
     @ManyToMany
     private List<Author> authors;
 
-    @OneToMany
-    private List<Loan> loan;
+    @OneToMany(mappedBy = "book")
+    private List<Loan> loans;
 }
