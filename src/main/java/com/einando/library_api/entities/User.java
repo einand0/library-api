@@ -24,6 +24,12 @@ public class User {
     private String email;
     private String phone;
 
-    @OneToMany(mappedBy = "user")
+    public User(String name, String email, String phone){
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Loan> loans;
 }
